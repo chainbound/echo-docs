@@ -6,4 +6,4 @@ title: Use Cases
 ---------------
 ### WIP
 
-We will showcase some use-cases per User type in this page.
+We will showcase some use-cases per user type in this page.
