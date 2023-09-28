@@ -20,7 +20,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Added `echo_getBundleStats` endpoint: fetch info of a specific bundle, such as if it was included in a block, when and by which builder.
 - Added `echo_getInclusionStats`: fetch aggregated info about the inclusion of your MEV bundles, such as which builder is including your bundles the most, the average delay between when you send your bundles and when they are included in a block, and your "inclusion rate" defined as how many bundles you send vs how many are included in a block.
--
 
 ## [0.1.0] - 2023-08-31
 

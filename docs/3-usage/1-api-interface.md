@@ -66,8 +66,8 @@ with the `x-flashbots-signature` field as a sibling of the `payload` field. Here
 - [eth_cancelBundle](#eth_cancelbundle)
 - [eth_sendPrivateRawTransaction](#eth_sendprivaterawtransaction)
 - [echo_status](#echo_status)
-- [echo_getBundleStats](#echo_getbundlestats)
-- [echo_getInclusionStats](#echo_getinclusionstats)
+- [echo_getBundleStats](/docs/usage/analytics#echo_getbundlestats)
+- [echo_getInclusionStats](/docs/usage/analytics#echo_getinclusionstats)
 
 ## `eth_sendBundle`
 
@@ -120,7 +120,7 @@ The `awaitBuilderResponses` flag can be very useful during testing & debugging, 
 to false in production, as it will slow down the API response time significantly.
 :::
 
-### Successful response
+#### Successful response
 
 Here is the successful response format that you can expect from the API:
 
@@ -191,7 +191,7 @@ You cannot specify a `replacementUuid` together with the `usePublicMempool` flag
 as transactions sent to the public mempool can always be included by anyone.
 :::
 
-### Successful response
+#### Successful response
 
 ```js
 {
@@ -239,7 +239,7 @@ You can also omit the `params` object in the request and just include the signed
 In this case, the transaction will be forwarded to all available builders that support receiving private transactions.
 :::
 
-### Successful response
+#### Successful response
 
 Here is the successful response format that you can expect from the API:
 
@@ -271,93 +271,12 @@ This is mainly useful for testing your API key and connectivity.
 }
 ```
 
-### Successful response
+#### Successful response
 
 ```json
 {
   "jsonrpc": "2.0",
   "id": "1",
   "result": "online"
-}
-```
-
-## `echo_getBundleStats`
-
----
-
-This endpoint can be used to fetch information about a specific bundle sent to Echo.
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "echo_getBundleStats",
-  "params": [
-    {
-      bundleHash, // String, the bundle hash of the bundle you want to get stats for
-    }
-  ]
-}
-```
-
-### Successful response
-
-Here is the successful response format that you can expect from the API:
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": "1",
-  "result": {
-    [
-      {
-        bundleHash,  // String, the bundle hash of the bundle you requested stats for
-        included,    // Boolean, true if the bundle was included in a block, false otherwise
-        timestamp,   // Number, the timestamp (in milliseconds) when the bundle was included in a block
-        blockNumber, // Number, the block number in which the bundle was included
-        blockBuilder // String, the name of the builder that included the bundle
-      },
-      ...            // Additional bundles with the same bundleHash can be returned if they exist
-    ]
-  }
-}
-```
-
-## `echo_getInclusionStats`
-
----
-
-This endpoint can be used to fetch information about the inclusion details of the bundles you send through Echo.
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "echo_getInclusionStats",
-  "params": [
-    {} // Empty object
-  ]
-}
-```
-
-### Successful response
-
-Here is the successful response format that you can expect from the API:
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": "1",
-  "result": {
-    avgInclusionDelay,   // Number, the average delay (in milliseconds) between bundle submission and inclusion in a block
-    inclusionRate,       // Number, the ratio of bundles sent through Echo that were included in a block
-    bundlesIncludedByBuilder: [
-      {
-        blockBuilder,    // String, the name of the builder
-        bundlesIncluded, // Number, the number of bundles included by this builder
-      },
-      ...                // Each builder that included at least one of your bundles will be returned
-    ]
-  }
 }
 ```
