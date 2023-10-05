@@ -106,6 +106,8 @@ Users can send bundles via the `eth_sendBundle` method with this interface:
                              //   included in a block, or the specified timeout is reached. Defaults to false.
       awaitReceiptTimeoutMs, // (Optional) Number, The timeout (in milliseconds) for the awaitReceipt flag.
                              //   Defaults to 30000 (30 seconds) if not specified and awaitReceipt is true.
+      retryUntil,            // (Optional) String, a hex encoded block number until which the bundle should be retried
+                             //   with the same parameters if it is not included in the target block.
     }
   ]
 }

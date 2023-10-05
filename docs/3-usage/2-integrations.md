@@ -18,6 +18,8 @@ Users can specify which Builders to send their bundles via the `mevBuilders` arr
 | `f1b`                                          |
 | `nfactorial`                                   |
 | `buildai`                                      |
+| `ethbuilder`                                   |
+| `eigenphi`                                     |
 | `all` _to explicitly set all the above values_ |
 
 :::note
@@ -31,14 +33,17 @@ contact us on [Discord](https://discord.gg/J4KNdeCYGX) or email us at admin@chai
 
 Here is a list of the builders currently supported, and the features that each one supports:
 
-| **feature**             | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **f1b** | **nfactorial** | **buildai** |
-| ----------------------- | ------------- | --------------- | --------- | --------------- | --------- | ------- | -------------- | ----------- |
-| `eth_sendBundle`        | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           |
-| `eth_cancelBundle`      | ✓             | ✗               | ✓         | ✗               | ✓         | ✓       | ✓              | ✗           |
-| ETH refunds             | ✗             | ✓               | ✓         | ✓               | ✓         | ✓       | ✗              | ✗           |
-| custom refund recipient | ✗             | ✓               | ✓         | ✗               | ✓         | ✓       | ✗              | ✗           |
-| refund on multiple txs  | ✗             | ✗               | ✓         | ✗               | ✗         | ✗       | ✗              | ✗           |
-| `X-Flashbots-Signature` | required      | -               | -         | -               | optional  | -       | optional       | optional    |
+| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **f1b** | **nfactorial** | **buildai** | **ethbuilder** | **eigenphi** |
+| -------------------------------------------- | ------------- | --------------- | --------- | --------------- | --------- | ------- | -------------- | ----------- | -------------- | ------------ |
+| `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✓              | ✓            |
+| `eth_cancelBundle`                           | ✓             | ✗               | ✓         | ✗               | ✓         | ✓       | ✓              | ✗           | ✗              | ✗            |
+| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
+| ETH refunds                                  | ✗             | ✓               | ✓         | ✓               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
+| custom refund recipient                      | ✗             | ✓               | ✓         | ✗               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
+| refund on multiple txs                       | ✗             | ✗               | ✓         | ✗               | ✗         | ✗       | ✗              | ✗           | ✗              | ✗            |
+| supports `min/maxTimestamp`                  | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✗              | ✓            |
+| Doesn't need `blockNumber` for cancellations | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✗              | ✓            |
+| `X-Flashbots-Signature`                      | required      | -               | -         | -               | optional  | -       | optional       | optional    | -              | -            |
 
 :::info
 Echo API endpoint offer the ability to specify a set of `mevBuilders` to which the request should be forwarded.
