@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.3.0] - 2023-09-27
 
 - Added full websocket support: you can now optionally use websockets instead of HTTP for all endpoints
-- Added `echo_sendPrivateRawTransaction` endpoint: send a raw transaction directly to block builders
+- Added `eth_sendPrivateRawTransaction` endpoint: send a raw transaction directly to block builders
 - Added `echo_status` endpoint for testing and stauts checks
 - Fixed a bug with the `x-flashbots-signature` request header failing for some users
 - Removed blocknative as a builder (they shut down their builder service)
@@ -23,12 +23,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.0] - 2023-08-31
 
-Initial release
-
-### Added
-
-- Initial release of Echo
-
-### Changed
-
-### Fixed
+Initial release.
