@@ -143,7 +143,7 @@ Here is the successful response format that you can expect from the API:
 }
 ```
 
-### Receipt Notification
+### Bundle Receipt Notification
 
 If you set the `awaitReceipt` flag to **true** in the request params,
 the response will also include the `receiptNotification` field, which will be one of the following:
@@ -216,9 +216,14 @@ Echo allows users to send private transactions via the `eth_sendPrivateRawTransa
   "method": "eth_sendPrivateRawTransaction",
   "params": [
     {
-      tx,            // String, the signed private transaction to execute
-      mevBuilders,   // (Optional) Array[String], A list of mev builders to send this transaction to.
-                     //   If not specified, the transaction will be sent to all available builders
+      tx,                    // String, the signed private transaction to execute
+      mevBuilders,           // (Optional) Array[String], A list of mev builders to send this transaction to.
+                             //   If not specified, the transaction will be sent to all available builders that
+                             //   support receiving private transactions.
+      awaitReceipt,          // (Optional) Boolean, If true, the HTTP request will hang until the transaction is either
+                             //   included in a block, or the specified timeout is reached. Defaults to false.
+      awaitReceiptTimeoutMs, // (Optional) Number, The timeout (in milliseconds) for the awaitReceipt flag.
+                             //   Defaults to 30000 (30 seconds) if not specified and awaitReceipt is true.
     }
   ]
 }
@@ -250,7 +255,29 @@ Here is the successful response format that you can expect from the API:
   "jsonrpc": "2.0",
   "id": "123",
   "result": {
-    txHash, // String, the transaction hash of the private transaction
+    txHash,              // String, the transaction hash of the private transaction.
+    receiptNotification, // (Optional) object containing the on-chain receipt of the transaction.
+                         //   This field will only be present if you specified the `awaitReceipt` flag
+                         //   in the request. See below for more details.
+  }
+}
+```
+
+### Transaction Receipt Notification
+
+If you set the `awaitReceipt` flag to **true** in the request params,
+the response will also include the `receiptNotification` field, which will be one of the following:
+
+```js
+{
+  // ...,
+  "receiptNotification": {
+    status: "included" | "timedOut", // "included" if the transaction was included in a block, "timedOut" if the
+                                     // "awaitReceiptTimeoutMs" (default: 60s) was reached without inclusion.
+    data: {
+      blockNumber, // Number, the block number in which the transaction was included. Only present if status == "included"
+      elapsedMs    // Number, the time (in milliseconds) since the bundle was submitted. Always present.
+    }
   }
 }
 ```
