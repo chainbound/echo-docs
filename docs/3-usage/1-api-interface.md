@@ -224,6 +224,11 @@ Echo allows users to send private transactions via the `eth_sendPrivateRawTransa
                              //   included in a block, or the specified timeout is reached. Defaults to false.
       awaitReceiptTimeoutMs, // (Optional) Number, The timeout (in milliseconds) for the awaitReceipt flag.
                              //   Defaults to 30000 (30 seconds) if not specified and awaitReceipt is true.
+      sendAsBundle,          // (Optional) Boolean, If true, the transaction will be sent as a bundle to the builders.
+                             //   This option can significantly speed up on-chain inclusion. Defaults to false.
+      retryUntil,            // (Optional) String, a hex encoded block number until which the transaction should be retried
+                             //   with the same parameters if it is not included in the target block. Only valid if
+                             //   `sendAsBundle` is set to true. Default to current block number + 25.
     }
   ]
 }
