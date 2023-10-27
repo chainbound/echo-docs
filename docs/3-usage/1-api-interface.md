@@ -264,6 +264,10 @@ Here is the successful response format that you can expect from the API:
     receiptNotification, // (Optional) object containing the on-chain receipt of the transaction.
                          //   This field will only be present if you specified the `awaitReceipt` flag
                          //   in the request. See below for more details.
+    bundleHash,          // (Optional) String, a unique 256-bit bundle identifier, based on the payload.
+                         //   This field will only be present if you specified the `sendAsBundle` flag
+                         //   as true in the request. It can be used to cancel pending transactions that
+                         //   were sent as bundles, but not yet included in a block.
   }
 }
 ```
