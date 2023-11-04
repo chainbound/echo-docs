@@ -99,7 +99,7 @@ Users can send bundles via the `eth_sendBundle` method with this interface:
       usePublicMempool,      // (Optional) Boolean, If true, the bundle will also be propagated to the public mempool
                              //   through Fiber's internal network. Defaults to false.
                              //   WARNING: Using this flag will void the privacy guarantees of the bundle, making it
-                             //   frontrunnable by anyone else, including other MEV searchers.
+                             //   frontrunnable by MEV searchers.
       awaitBuilderResponses, // (Optional) Boolean, If true, the HTTP request will hang until all builders have
                              //   responded, and the result will contain a `builderResponses` field. Defaults to false.
       awaitReceipt,          // (Optional) Boolean, If true, the HTTP request will hang until the bundle is either
@@ -220,10 +220,15 @@ Echo allows users to send private transactions via the `eth_sendPrivateRawTransa
       mevBuilders,           // (Optional) Array[String], A list of mev builders to send this transaction to.
                              //   If not specified, the transaction will be sent to all available builders that
                              //   support receiving private transactions.
+                             //   If "mevBuilders":["none"] and "usePublicMempool":true transactions will ONLY be sent via mempool thorugh Fiber's internal network. 
       awaitReceipt,          // (Optional) Boolean, If true, the HTTP request will hang until the transaction is either
                              //   included in a block, or the specified timeout is reached. Defaults to false.
       awaitReceiptTimeoutMs, // (Optional) Number, The timeout (in milliseconds) for the awaitReceipt flag.
                              //   Defaults to 30000 (30 seconds) if not specified and awaitReceipt is true.
+      usePublicMempool,      // (Optional) Boolean, If true, the transaction will  be propagated to the public mempool
+                             //   through Fiber's internal network. Defaults to false.
+                             //   WARNING: Using this flag will void the privacy guarantees of the transactions, making it
+                             //   frontrunnable by MEV searchers.
       sendAsBundle,          // (Optional) Boolean, If true, the transaction will be sent as a bundle to the builders.
                              //   This option can significantly speed up on-chain inclusion. Defaults to false.
       retryUntil,            // (Optional) String, a hex encoded block number until which the transaction should be retried
