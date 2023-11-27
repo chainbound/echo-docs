@@ -8,7 +8,7 @@
     <subtitle>Echo Blog</subtitle>
     <icon>https://echo.chainbound.io/img/echo-logo.jpg</icon>
     <entry>
-        <title type="html"><![CDATA[Introducing Echo: A Comprehensive Builder API for On-Chain Trading]]></title>
+        <title type="html"><![CDATA[Introducing Echo: The Comprehensive Builder API]]></title>
         <id>https://echo.chainbound.io/blog/introducing-echo</id>
         <link href="https://echo.chainbound.io/blog/introducing-echo"/>
         <updated>2023-11-27T00:00:00.000Z</updated>
