@@ -1,6 +1,6 @@
 ---
 slug: introducing-echo
-title: "Introducing Echo: A Comprehensive Builder API for On-Chain Trading"
+title: "Introducing Echo: The Comprehensive Builder API"
 authors: [nicolas]
 tags: [ethereum, pbs, mev]
 ---
