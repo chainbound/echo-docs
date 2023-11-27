@@ -52,6 +52,12 @@ const rpcRequest = JSON.stringify({
   params: [bundle],
 });
 
+// listen for receipt notifications from Echo
+echoClient.on("message", async (data: Buffer) => {
+  let text = data.toString("utf-8");
+  console.log("Received message from Echo:", text);
+});
+
 echoClient.send(rpcRequest);
 ```
 
@@ -80,6 +86,12 @@ const rpcRequest = JSON.stringify({
   jsonrpc: "2.0",
   method: "eth_sendPrivateRawTransaction",
   params: [approvalTxPayload],
+});
+
+// listen for receipt notifications from Echo
+echoClient.on("message", async (data: Buffer) => {
+  let text = data.toString("utf-8");
+  console.log("Received message from Echo:", text);
 });
 
 console.log("Sending transaction to Echo:", rpcRequest);
