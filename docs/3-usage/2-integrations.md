@@ -35,19 +35,6 @@ contact us on [Discord](https://discord.gg/J4KNdeCYGX) or email us at admin@chai
 
 Here is a list of the builders currently supported, and the features that each one supports:
 
-<<<<<<< HEAD
-| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **f1b** | **nfactorial** | **buildai** | **ethbuilder** | **eigenphi** |
-| -------------------------------------------- | ------------- | --------------- | --------- | --------------- | --------- | ------- | -------------- | ----------- | -------------- | ------------ |
-| `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✓              | ✓            |
-| `eth_cancelBundle`                           | ✓             | ✗               | ✓         | ✗               | ✓         | ✓       | ✓              | ✗           | ✗              | ✗            |
-| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
-| ETH refunds                                  | ✗             | ✓               | ✓         | ✓               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
-| Custom refund recipient                      | ✗             | ✓               | ✓         | ✗               | ✓         | ✓       | ✗              | ✗           | ✗              | ✗            |
-| Refund on multiple txs*                      | ✗             | ✗               | ✓         | ✗               | ✗         | ✗       | ✗              | ✗           | ✗              | ✗            |
-| Supports `min/maxTimestamp`                  | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✗              | ✓            |
-| Doesn't need `blockNumber` for cancellations | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✗              | ✓            |
-| `X-Flashbots-Signature`                      | required      | -               | -         | -               | optional  | -       | optional       | optional    | -              | -            |
-=======
 | **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **f1b** | **nfactorial** | **buildai** | **ethbuilder** | **eigenphi** | **smithbuilder** | **loki** |
 | -------------------------------------------- | ------------- | --------------- | --------- | --------------- | --------- | ------- | -------------- | ----------- | -------------- | ------------ | ---------------- | -------- |
 | `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓       | ✓              | ✓           | ✓              | ✓            | ✓                | ✓        |
