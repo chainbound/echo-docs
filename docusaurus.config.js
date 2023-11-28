@@ -69,10 +69,14 @@ const config = {
             position: "left",
           },
           {
+            label: "Docs",
             type: "doc",
             docId: "architecture",
             position: "left",
-            label: "Docs",
+          },
+          {
+            label: "Blog",
+            to: "/blog",
           },
           {
             to: "/commitment",
@@ -115,8 +119,8 @@ const config = {
                 href: "https://github.com/chainbound",
               },
               {
-                label: 'Chainbound',
-                href: 'https://www.chainbound.io/',
+                label: "Chainbound",
+                href: "https://www.chainbound.io/",
               },
             ],
           },
