@@ -17,6 +17,8 @@ Users can specify which Builders to send their bundles via the `mevBuilders` arr
 | `titan`                                        |
 | `buildai`                                      |
 | `loki`                                         |
+| `lightspeed`                                   |
+| `jetbldr`                                      |
 | `all` _to explicitly set all the above values_ |
 
 :::note
@@ -30,17 +32,17 @@ contact us on [Discord](https://discord.gg/J4KNdeCYGX) or email us at admin@chai
 
 Here is a list of the builders currently supported, and the features that each one supports:
 
-| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **buildai** | **loki** |
-|----------------------------------------------|---------------|-----------------|-----------|-----------------|-----------|-------------|----------|
-| `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        |
-| `eth_cancelBundle`                           | ✓             | ✗               | ✓         | ✗               | ✓         | ✗           | ✓        |
-| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        |
-| ETH refunds                                  | ✗             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        |
-| custom refund recipient                      | ✗             | ✓               | ✓         | ✗               | ✓         | ✗           | ✓        |
-| refund on multiple txs                       | ✗             | ✗               | ✓         | ✗               | ✗         | ✗           | ✓        |
-| supports `min/maxTimestamp`                  | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        |
-| Doesn't need `blockNumber` for cancellations | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        |
-| `X-Flashbots-Signature`                      | required      | -               | -         | -               | optional  | optional    | optional |
+| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **buildai** | **loki** | **lightspeed** | **jetbldr** |
+|----------------------------------------------|---------------|-----------------|-----------|-----------------|-----------|-------------|----------|----------------|-------------|
+| `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        | ✓              | ✓           |
+| `eth_cancelBundle`                           | ✓             | ✗               | ✓         | ✗               | ✓         | ✗           | ✓        | ✓              | ✗           |
+| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        | ✓              | ✗           |
+| ETH refunds                                  | ✗             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        | ✓              | ✗           |
+| custom refund recipient                      | ✗             | ✓               | ✓         | ✗               | ✓         | ✗           | ✓        | ✓              | ✗           |
+| refund on multiple txs                       | ✗             | ✗               | ✓         | ✗               | ✗         | ✗           | ✓        | ✗              | ✗           |
+| supports `min/maxTimestamp`                  | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        | ✓              | ✓           |
+| Doesn't need `blockNumber` for cancellations | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        | ✓              | ✓           |
+| `X-Flashbots-Signature`                      | required      | -               | -         | -               | optional  | optional    | optional | optional       | optional    |
 
 \* List of tx hashes from which the refund is calculated 
 
