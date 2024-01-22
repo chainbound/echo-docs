@@ -1,6 +1,6 @@
 ---
 slug: echo-v1-release
-title: "Echo Release V1.0: Enhanced, Efficient, and Globally Distributed"
+title: "Echo Release V1.0: Now Globally Distributed"
 authors: [nicolas]
 tags: [ethereum, pbs, mev]
 ---
