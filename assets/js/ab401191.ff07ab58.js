@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfiber_website=self.webpackChunkfiber_website||[]).push([[878],{5113:e=>{e.exports=JSON.parse('{"label":"mev","permalink":"/blog/tags/mev","allTagsPath":"/blog/tags","count":1}')}}]);

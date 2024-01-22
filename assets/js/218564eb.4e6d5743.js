@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfiber_website=self.webpackChunkfiber_website||[]).push([[666],{5243:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/mev","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
