@@ -7,8 +7,8 @@ Echo supports the same API interface as the [Flashbots RPC](https://docs.flashbo
 
 The Echo API is available in both HTTP and Websocket flavors:
 
-- The HTTP API entrypoint is `https://echo-rpc.chainbound.io/`.
-- The Websocket API entrypoint is `wss://echo-rpc.chainbound.io/ws`.
+- The HTTP API entrypoint is `https://v1.echo-rpc.io/`.
+- The Websocket API entrypoint is `wss://v1.echo-rpc.io/ws`.
 
 ## Authentication
 
@@ -20,12 +20,12 @@ You can test the authentication from your terminal as follows:
 
 ```shell
 # HTTP
-curl https://echo-rpc.chainbound.io -X POST -H "x-api-key: <YOUR_API_KEY>" -H "Content-Type: application/json" -d '{"id":1,"jsonrpc":"2.0","method":"echo_status","params":[]}'
+curl https://v1.echo-rpc.io -X POST -H "x-api-key: <YOUR_API_KEY>" -H "Content-Type: application/json" -d '{"id":1,"jsonrpc":"2.0","method":"echo_status","params":[]}'
 ```
 
 ```shell
 # Websocket
-wscat -c wss://echo-rpc.chainbound.io/ws -H "x-api-key: <YOUR_API_KEY>" -x '{"id":1,"jsonrpc":"2.0","method":"echo_status","params":[]}
+wscat -c wss://v1.echo-rpc.io/ws -H "x-api-key: <YOUR_API_KEY>" -x '{"id":1,"jsonrpc":"2.0","method":"echo_status","params":[]}
 ```
 
 ## Flashbots Authentication
