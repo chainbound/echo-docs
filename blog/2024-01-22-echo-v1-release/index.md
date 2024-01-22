@@ -21,18 +21,20 @@ The internal propagation is handled through a private link, which ensures that t
 
 In the above example, Bob from the United States is trying to send a bundle to a block builder in Europe. The two alternative paths are:
 
-- The builder's own RPC API (the orange line): direct connection with 200ms latency. In normal circumstances, the request will be routed through the public internet, which entails a relatively high latency when compared to datacenter-to-datacenter peerings.
-- Echo V1.0 (the blue path): A sum of three components: 20ms for the request to the closest Echo node, then 90ms of internal propagation time to reach the Echo node in Europe, and finally 10ms for the last leg to reach the block builder. This totals 120ms, which is 80ms faster than the direct connection in this specific example.
+- **The builder's own RPC API (the orange line)**: direct connection with 150ms latency. In normal circumstances, the request will be routed through the public internet, which entails a relatively high latency when compared to datacenter-to-datacenter peerings.
+- **Echo V1.0 (the blue path)**: A sum of three components: 20ms for the request to the closest Echo node, then 45ms of internal propagation time to reach the Echo node in Europe, and finally 10ms for the last leg to reach the block builder. This totals 75ms, which is 80ms faster than the direct connection in this specific example.
 
 Of course, the actual latency will vary depending on the user's location and the block builder's own optimizations. However, Echo V1.0 will always try to find the fastest path to the block builder.
 
 ## Try it today!
 
-Step into the future with Echo V1.0. Connect with our community on [Discord](https://discord.gg/4abpAT2tXw) to get started!
+Connect with our community on [Discord](https://discord.gg/4abpAT2tXw) to request
+an API key and get started with Echo!
 
-For existing Echo users, upgrading is dead simple. Simply change the Echo endpoint to:
+For existing users, upgrading to V1.0 is dead simple. All you have to do is change the RPC endpoint to:
 
 - HTTP: `https://v1.echo-rpc.io`
 - WS: `wss://v1.echo-rpc.io/ws`
 
-**Experience Echo V1.0.0 now – Elevate your MEV broadcasting experience with improved speed and global reach.**
+That's it! We hope you enjoy the new speed improvements, and if you have any
+questions or feedback we encourage you to reach out to us on [Discord](https://discord.gg/4abpAT2tXw).
