@@ -14,7 +14,7 @@ allowing users to directly send transactions and bundles to Block Builders.
 ## Transaction & Bundle Flow 
 ![](/img/echo-diagram.jpg)
 Following the infrographic depicted up here, users should expect the following flow: 
-1. **User submits an MEV bundle** via `https://echo-rpc.chainbound.io` endpoint with `eth_sendBundle` method.
+1. **User submits an MEV bundle** via `https://v1.echo-rpc.io` endpoint with `eth_sendBundle` method.
 2. **Echo picks up the bundle** and depending on user preferences:  
        A. Echo routes the bundle to the builders specified in `mevBuilders` field.  
        B. If user specified `usePublicMempool: true`, Echo also propagates the transaction to the public mempool.
