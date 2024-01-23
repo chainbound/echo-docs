@@ -9,7 +9,7 @@ tags: [ethereum, pbs, mev]
 
 ## Key Features of Echo V1.0
 
-- **Geographic Distribution:** Echo's network now spans across the globe. Transactions and bundles are routed to block builders based on geographic proximity and efficiency. This results in quicker and more reliable broadcasting, irrespective of the user's or builders' locations.
+- **Lower Latency:** Echo's network now spans across the globe: transactions and bundles are now routed to block builders based on geographic proximity to Echo nodes. This results in _quicker and more reliable broadcasting_, irrespective of the user's or builders' locations.
 - **Comprehensive Internal Redesign:** Echo V1.0.0 represents a total internal transformation. This is achieved mainly with two new components: Fly.io's [Corrosion](https://github.com/superfly/corrosion) as a distributed service discovery layer and shared database, and our own [MSG-RS](https://github.com/chainbound/msg-rs) messaging library for communication.
 
 ## How does it work?
