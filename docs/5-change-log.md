@@ -8,6 +8,12 @@ All notable changes to Echo will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 2024-01-28
+
+- Comprehensive internal redesign with Fly.io's [Corrosion](https://github.com/superfly/corrosion) and Chainbound's [MSG-RS](https://github.com/chainbound/msg-rs) libraries.
+- Lower latency across the globe with our internal hub-and-spoke propagation network
+- Seamless upgrade for existing users: no changes to the API.
+
 ## [0.3.0] - 2023-09-27
 
 - Added full websocket support: you can now optionally use websockets instead of HTTP for all endpoints
