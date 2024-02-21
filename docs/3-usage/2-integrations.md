@@ -18,7 +18,7 @@ Users can specify which Builders to send their bundles via the `mevBuilders` arr
 | `buildai`                                      |
 | `loki`                                         |
 | `lightspeed`                                   |
-| `jetbldr`                                      |
+| `bobthebuilder`                                |
 | `all` _to explicitly set all the above values_ |
 
 :::note
@@ -32,11 +32,11 @@ contact us on [Discord](https://discord.gg/J4KNdeCYGX) or email us at admin@chai
 
 Here is a list of the builders currently supported, and the features that each one supports:
 
-| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **buildai** | **loki** | **lightspeed** | **jetbldr** |
+| **feature**                                  | **flashbots** | **beaverbuild** | **rsync** | **builder0x69** | **titan** | **buildai** | **loki** | **lightspeed** | **bobthebuilder** |
 |----------------------------------------------|---------------|-----------------|-----------|-----------------|-----------|-------------|----------|----------------|-------------|
 | `eth_sendBundle`                             | ✓             | ✓               | ✓         | ✓               | ✓         | ✓           | ✓        | ✓              | ✓           |
 | `eth_cancelBundle`                           | ✓             | ✗               | ✓         | ✗               | ✓         | ✗           | ✓        | ✓              | ✗           |
-| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        | ✓              | ✗           |
+| `eth_sendPrivateRawTransaction`              | ✓             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        | ✓              | ✓           |
 | ETH refunds                                  | ✗             | ✓               | ✓         | ✓               | ✓         | ✗           | ✓        | ✓              | ✗           |
 | custom refund recipient                      | ✗             | ✓               | ✓         | ✗               | ✓         | ✗           | ✓        | ✓              | ✗           |
 | refund on multiple txs                       | ✗             | ✗               | ✓         | ✗               | ✗         | ✗           | ✓        | ✗              | ✗           |
