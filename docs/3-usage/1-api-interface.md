@@ -220,7 +220,8 @@ Echo allows users to send private transactions via the `eth_sendPrivateRawTransa
       mevBuilders,           // (Optional) Array[String], A list of mev builders to send this transaction to.
                              //   If not specified, the transaction will be sent to all available builders that
                              //   support receiving private transactions.
-                             //   If "mevBuilders":["none"] and "usePublicMempool":true transactions will ONLY be sent via mempool thorugh Fiber's internal network. 
+                             //   If "mevBuilders":["none"] and "usePublicMempool":true transactions will ONLY be
+                             //   sent via mempool thorugh Fiber's internal network.
       awaitReceipt,          // (Optional) Boolean, If true, the HTTP request will hang until the transaction is either
                              //   included in a block, or the specified timeout is reached. Defaults to false.
       awaitReceiptTimeoutMs, // (Optional) Number, The timeout (in milliseconds) for the awaitReceipt flag.
@@ -269,10 +270,12 @@ Here is the successful response format that you can expect from the API:
     receiptNotification, // (Optional) object containing the on-chain receipt of the transaction.
                          //   This field will only be present if you specified the `awaitReceipt` flag
                          //   in the request. See below for more details.
-    bundleHash,          // (Optional) String, a unique 256-bit bundle identifier, based on the payload.
+    bundleHash,          // (Optional) String, a unique bundle identifier, based on the payload.
                          //   This field will only be present if you specified the `sendAsBundle` flag
-                         //   as true in the request. It can be used to cancel pending transactions that
-                         //   were sent as bundles, but not yet included in a block.
+                         //   as true in the request. It can be used for analytics purposes.
+    replacementUuid,     // (Optional) String, UUIDv4 that can be used to cancel/replace this transaction.
+                         //   This field will only be present if you specified the `sendAsBundle` flag
+                         //   as true in the request.
   }
 }
 ```
